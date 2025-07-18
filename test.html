@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minami Haruto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Quicksand:wght@500&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(-45deg, #000000, #001a2d, #0a1f3d, #001e2d);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .profile-container {
+      text-align: center;
+      margin-top: 120px;
+    }
+
+    .glow-avatar {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 3px solid #00ffff;
+      box-shadow: 0 0 30px #00ffff, 0 0 50px #00ffff;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 15px #00ffffaa; }
+      to { box-shadow: 0 0 40px #00ffff, 0 0 70px #00ffff; }
+    }
+
+    .name {
+      font-size: 28px;
+      color: #00ffff;
+      font-family: 'Orbitron', sans-serif;
+      text-shadow: 0 0 10px #00ffffaa;
+      margin-top: 20px;
+      text-transform: uppercase;
+    }
+
+    .caption {
+      margin-top: 15px;
+      padding: 12px 24px;
+      background-color: rgba(0, 0, 0, 0.65);
+      border: 2px solid #0ff;
+      border-radius: 12px;
+      font-size: 20px;
+      font-family: 'Poppins', sans-serif;
+      text-shadow: 0 0 6px #000;
+      box-shadow: 0 0 10px #00ffff55;
+      animation: glowBorder 2s infinite alternate;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    @keyframes glowBorder {
+      from { box-shadow: 0 0 8px #0ff; }
+      to { box-shadow: 0 0 20px #0ff, 0 0 30px #0ff; }
+    }
+
+    .doc-btn, .fb-btn {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 3px solid #00ffff;
+      box-shadow: 0 0 20px #00ffff;
+      position: fixed;
+      bottom: 20px;
+      z-index: 10;
+      overflow: hidden;
+      transition: 0.3s ease;
+    }
+
+    .doc-btn:hover, .fb-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px #00ffffcc;
+    }
+
+    .doc-btn img, .fb-btn img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .doc-btn { left: 20px; }
+    .fb-btn { right: 20px; }
+
+    /* Nút âm nh?c */
+    .music-btn {
+      width: 40px;
+      height: 40px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      border-radius: 50%;
+      border: 2px solid #00ffff;
+      box-shadow: 0 0 10px #00ffff;
+      z-index: 100;
+      background: black;
+      overflow: hidden;
+      transition: 0.3s ease;
+    }
+
+    .music-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #00ffffcc;
+    }
+
+    .music-btn img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .click-effect {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #00ffff;
+      box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+      pointer-events: none;
+      animation: clickAnim 0.6s ease-out forwards;
+      z-index: 9999;
+    }
+
+    @keyframes clickAnim {
+      0% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(3); }
+    }
+
+    @media (max-width: 768px) {
+      .glow-avatar { width: 120px; height: 120px; }
+      .name { font-size: 22px; }
+      .caption { font-size: 16px; }
+      .doc-btn, .fb-btn { width: 50px; height: 50px; }
+      .music-btn { width: 35px; height: 35px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <img class="glow-avatar" src="https://scontent.fvii2-1.fna.fbcdn.net/v/t39.30808-6/518276923_122149736144739958_8805953047836190740_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=sGRNsQaYALgQ7kNvwGYmZFM&_nc_oc=AdkdPEdjqvwi2-ZG9_qcuITqX1zPaEBqqX-b6WAsnDwQH8uN_Es8VYioWfl9hduxHIvfzfW4AnenLUkPMCLzVCZz&_nc_zt=23&_nc_ht=scontent.fvii2-1.fna&_nc_gid=0voUXJ00iiMCYIHHBULhHg&oh=00_AfSke2OJ_nJUHyeFwv7fp2JzQp6x9QdYLDT1j5JQtQGJLQ&oe=687EC375" alt="avatar" />
+    <div class="name">minami haruto</div>
+    <div class="caption">Tai Lieu Hoc Tap</div>
+    <div class="caption">2k11</div>
+  </div>
+
+  <a href="https://anotepad.com/notes/pbewg5k8" target="_blank" class="doc-btn">
+    <img src="https://cdn.tgdd.vn/2020/03/GameApp/GoogleDrive-200x200.jpg" alt="doc" />
+  </a>
+  <a href="https://www.facebook.com/harutonek/" target="_blank" class="fb-btn">
+    <img src="https://cdn.pixabay.com/photo/2021/12/14/22/29/meta-6871457_1280.png" alt="fb" />
+  </a>
+
+  <!-- Nút âm nh?c -->
+  <button class="music-btn" onclick="toggleMusic()">
+    <img src="https://png.pngtree.com/png-clipart/20230419/original/pngtree-music-sign-icon-png-image_9068297.png" alt="music">
+  </button>
+
+  <!-- Nh?c n?n -->
+  <audio id="bg-music" loop>
+    <source src="https://files.catbox.moe/jg5u2k.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    const audio = document.getElementById('bg-music');
+    let isPlaying = false;
+
+    function toggleMusic() {
+      if (isPlaying) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+      isPlaying = !isPlaying;
+    }
+
+    document.addEventListener("click", function(e) {
+      const effect = document.createElement("div");
+      effect.className = "click-effect";
+      effect.style.left = `${e.clientX - 10}px`;
+      effect.style.top = `${e.clientY - 10}px`;
+      document.body.appendChild(effect);
+      setTimeout(() => effect.remove(), 600);
+    });
+  </script>
+</body>
+</html>
